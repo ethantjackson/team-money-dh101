@@ -1,9 +1,88 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import IndividualCollectivismHist from './IndividualCollectivismHist';
 import { Container, Grid, Typography } from '@mui/material';
+import * as d3 from 'd3';
 import Navbar from './Navbar';
+import educationData from './bachelorsAttainment.csv';
+import Plot from 'react-plotly.js';
+import Plotly from 'plotly.js';
+
+const rightmostNonEmptyRow = (row) => {
+  let val = null;
+  for (let key in row) {
+    if (!isNaN(row[key])) {
+      val = row[key];
+    }
+  }
+  return val;
+};
 
 const Narrative = () => {
+  useEffect(() => {
+    d3.csv(educationData)
+      .then((data) => {
+        data = data.map((row, idx) => {
+          const percentage = rightmostNonEmptyRow(row);
+          if (percentage != null) {
+            row.BachelorsPercentage = parseFloat(percentage);
+          }
+          return row;
+        });
+
+        data = data.filter((row) => row.BachelorsPercentage);
+        const femaleData = data.filter(
+          (row) =>
+            row['Series Name'] ===
+            "Educational attainment, at least Bachelor's or equivalent, population 25+, female (%) (cumulative)"
+        );
+        const maleData = data.filter(
+          (row) =>
+            row['Series Name'] ===
+            "Educational attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumulative)"
+        );
+        const diffData = maleData.map((row) => {
+          const countryName = row['Country Name'];
+          const femaleRow = femaleData.find(
+            (femaleRow) => (femaleRow['Country Name'] = countryName)
+          );
+          if (femaleRow) {
+            row.PercentageDifferent =
+              row.BachelorsPercentage - femaleRow.BachelorsPercentage;
+          }
+          return row;
+        });
+
+        var choroplethData = [
+          {
+            type: 'choropleth',
+            locationmode: 'country names',
+            locations: maleData.map((row) => row['Country Name']),
+            z: maleData.map((row) => row['BachelorsPercentage']),
+            text: maleData.map((row) => row['Country Name']),
+            autocolorscale: true,
+          },
+        ];
+
+        var choroplethLayout = {
+          title:
+            "Education attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumultative)",
+          geo: {
+            projection: {
+              type: 'robinson',
+            },
+          },
+        };
+
+        Plotly.newPlot('maleChoroplethDiv', choroplethData, choroplethLayout, {
+          showLink: false,
+        });
+      })
+      .catch((err) => console.error('Error loading the CSV file: ', err));
+
+    return () => {
+      Plotly.purge('maleChoroplethDiv');
+    };
+  }, []);
   return (
     <>
       <Navbar />
@@ -60,6 +139,10 @@ const Narrative = () => {
           egalitarian economic landscape.
         </Typography>
         <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3}>
+          Education gaps drive wealth disparity
+        </Typography>
+        <div id='maleChoroplethDiv' />
+        <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3} mb={1}>
           Gender employment trends
         </Typography>
         <Grid container>
@@ -69,18 +152,18 @@ const Narrative = () => {
               width='600'
               height='371'
               seamless
-              frameborder='0'
+              frameBorder='0'
               scrolling='no'
               src='https://docs.google.com/spreadsheets/d/e/2PACX-1vTY4neyrOE8JbYaCXW6kMMX-DxD90lym80SX8LhzMatCIJVwuNUe0Sf0KhdR0BdHrihmim0XHcU5R7h/pubchart?oid=1385848547&amp;format=interactive'
             />
-          </Grid>{' '}
+          </Grid>
           <Grid item xs={6}>
             <iframe
               title='Women Employment Rates'
               width='600'
               height='361'
               seamless
-              frameborder='0'
+              frameBorder='0'
               scrolling='no'
               src='https://docs.google.com/spreadsheets/d/e/2PACX-1vTY4neyrOE8JbYaCXW6kMMX-DxD90lym80SX8LhzMatCIJVwuNUe0Sf0KhdR0BdHrihmim0XHcU5R7h/pubchart?oid=969139854&amp;format=interactive'
             />
