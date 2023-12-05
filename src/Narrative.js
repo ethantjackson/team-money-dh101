@@ -151,7 +151,13 @@ const Narrative = () => {
   return (
     <>
       <Navbar />
-      <Container sx={{ backgroundColor: 'white', paddingTop: '50px' }}>
+      <Container
+        sx={{
+          backgroundColor: 'white',
+          paddingTop: '50px',
+          paddingBottom: '50px',
+        }}
+      >
         <Typography variant='h1' mb={2}>
           Exporing the Data
         </Typography>
@@ -261,10 +267,10 @@ const Narrative = () => {
           Gender employment trends
         </Typography>
         <Grid container>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6} sx={{ overflow: 'scroll' }}>
             <iframe
               title='Men Employment Rates'
-              width='600'
+              width='500'
               height='371'
               seamless
               frameBorder='0'
@@ -272,10 +278,10 @@ const Narrative = () => {
               src='https://docs.google.com/spreadsheets/d/e/2PACX-1vTY4neyrOE8JbYaCXW6kMMX-DxD90lym80SX8LhzMatCIJVwuNUe0Sf0KhdR0BdHrihmim0XHcU5R7h/pubchart?oid=1385848547&amp;format=interactive'
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6} sx={{ overflow: 'scroll' }}>
             <iframe
               title='Women Employment Rates'
-              width='600'
+              width='500'
               height='361'
               seamless
               frameBorder='0'

@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './Navbar';
 import {
   Timeline as MuiTimeline,
@@ -8,9 +7,11 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { Box, Container, Typography } from '@mui/material';
+import { useMediaQuery, Box, Container, Typography } from '@mui/material';
 
 const Timeline = () => {
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  console.log(isSmallScreen);
   return (
     <>
       <Navbar />
@@ -18,7 +19,7 @@ const Timeline = () => {
         <Typography variant='h1'>A Gender-Wealth Gap History</Typography>
         <MuiTimeline position='alternate-reverse'>
           {timelineItems.map((timelineItem, idx) => (
-            <TimelineItem>
+            <TimelineItem key={timelineItem.title}>
               <TimelineSeparator sx={{ color: 'white' }}>
                 <TimelineDot variant='outlined' color='inherit' />
                 {idx < timelineItems.length - 1 && (
@@ -33,14 +34,14 @@ const Timeline = () => {
                         borderRadius: '15px',
                         padding: '16px',
                         position: 'relative',
-                        right: idx % 2 === 0 ? '15px' : '0',
+                        right: '15px',
                       }
                     : {
                         backgroundColor: (theme) => theme.palette.primary.main,
                         borderRadius: '15px',
                         padding: '16px',
                         position: 'relative',
-                        left: idx % 2 === 1 ? '15px' : '0',
+                        left: '15px',
                       }
                 }
               >
