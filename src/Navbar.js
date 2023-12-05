@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Link, Typography } from '@mui/material';
+import { Box, Container, Grid, Link } from '@mui/material';
 import React from 'react';
 
 const Navbar = () => {
@@ -10,6 +10,7 @@ const Navbar = () => {
         backgroundColor: (theme) => theme.palette.secondary.main,
         position: 'fixed',
         width: '100%',
+        zIndex: '3',
       }}
       pt={1}
       pb={1}
@@ -32,7 +33,6 @@ const Navbar = () => {
                   sx={{
                     transition: 'font-weight 0.1s',
                     '&:hover': {
-                      // color: 'red',
                       cursor: 'pointer',
                       fontWeight: 'bold',
                     },
