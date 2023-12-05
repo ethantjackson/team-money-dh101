@@ -4,8 +4,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import * as d3 from 'd3';
 import Navbar from './Navbar';
 import educationData from './bachelorsAttainment.csv';
-import Plot from 'react-plotly.js';
-import Plotly from 'plotly.js';
+import Plotly from 'plotly.js/dist/plotly';
 
 const rightmostNonEmptyRow = (row) => {
   let val = null;
@@ -41,18 +40,19 @@ const Narrative = () => {
             "Educational attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumulative)"
         );
         const diffData = maleData.map((row) => {
-          const countryName = row['Country Name'];
+          const countryCode = row['Country Code'];
           const femaleRow = femaleData.find(
-            (femaleRow) => (femaleRow['Country Name'] = countryName)
+            (femaleRow) => femaleRow['Country Code'] === countryCode
           );
+          const diffRow = JSON.parse(JSON.stringify(row));
           if (femaleRow) {
-            row.PercentageDifferent =
+            diffRow.PercentageDifferent =
               row.BachelorsPercentage - femaleRow.BachelorsPercentage;
           }
-          return row;
+          return diffRow;
         });
 
-        var choroplethData = [
+        var maleChoroplethData = [
           {
             type: 'choropleth',
             locationmode: 'country names',
@@ -63,7 +63,7 @@ const Narrative = () => {
           },
         ];
 
-        var choroplethLayout = {
+        var maleChoroplethLayout = {
           title:
             "Education attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumultative)",
           geo: {
@@ -73,14 +73,79 @@ const Narrative = () => {
           },
         };
 
-        Plotly.newPlot('maleChoroplethDiv', choroplethData, choroplethLayout, {
-          showLink: false,
-        });
+        var femaleChoroplethData = [
+          {
+            type: 'choropleth',
+            locationmode: 'country names',
+            locations: femaleData.map((row) => row['Country Name']),
+            z: femaleData.map((row) => row['BachelorsPercentage']),
+            text: femaleData.map((row) => row['Country Name']),
+            autocolorscale: true,
+          },
+        ];
+
+        var femaleChoroplethLayout = {
+          title:
+            "Education attainment, at least Bachelor's or equivalent, population 25+, female (%)",
+          geo: {
+            projection: {
+              type: 'robinson',
+            },
+          },
+        };
+
+        var diffChoroplethData = [
+          {
+            type: 'choropleth',
+            locationmode: 'country names',
+            locations: diffData.map((row) => row['Country Name']),
+            z: diffData.map((row) => row['PercentageDifferent']),
+            text: diffData.map((row) => row['Country Name']),
+            autocolorscale: true,
+          },
+        ];
+
+        var diffChoroplethLayout = {
+          title:
+            'Difference in higher education attainment between genders (male - females), population 25+, (%)',
+          geo: {
+            projection: {
+              type: 'robinson',
+            },
+          },
+        };
+
+        Plotly.newPlot(
+          'maleChoroplethDiv',
+          maleChoroplethData,
+          maleChoroplethLayout,
+          {
+            showLink: false,
+          }
+        );
+        Plotly.newPlot(
+          'femaleChoroplethDiv',
+          femaleChoroplethData,
+          femaleChoroplethLayout,
+          {
+            showLink: false,
+          }
+        );
+        Plotly.newPlot(
+          'diffChoroplethDiv',
+          diffChoroplethData,
+          diffChoroplethLayout,
+          {
+            showLink: false,
+          }
+        );
       })
       .catch((err) => console.error('Error loading the CSV file: ', err));
 
     return () => {
       Plotly.purge('maleChoroplethDiv');
+      Plotly.purge('femaleChoroplethDiv');
+      Plotly.purge('diffChoroplethDiv');
     };
   }, []);
   return (
@@ -141,7 +206,57 @@ const Narrative = () => {
         <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3}>
           Education gaps drive wealth disparity
         </Typography>
+        <Typography
+          variant='body2'
+          color='grey'
+          mt={2}
+          mb={-2}
+          sx={{ textAlign: 'center', zIndex: '2', position: 'relative' }}
+        >
+          The following choropleth maps can be zoomed and dragged.
+        </Typography>
         <div id='maleChoroplethDiv' />
+        <div id='femaleChoroplethDiv' />
+        <div id='diffChoroplethDiv' />
+        <Typography>
+          The global map of bachelor's attainment by gender vividly portrays the
+          significant impact that education has on wealth acquisition, with a
+          clear difference between male and female educational attainment levels
+          across various regions. In Western countries where females outpace
+          males in higher education—as represented by the shades of purple—there
+          appears to be a correlation with greater financial literacy and
+          potential for wealth among women. This observation is bolstered by
+          Christina E. Bannier’s study, which posits that higher education
+          markedly strengthens financial wealth for women, while this effect is
+          less pronounced for men.
+          <br /> <br />
+          On the other hand, the orange and yellow hues dominating regions in
+          the Middle East, North Africa, and parts of Asia indicate a prevalent
+          educational gap favoring males. In these areas, traditional gender
+          roles, economic structures, and educational opportunities create
+          disparities that likely extend to wealth accumulation. Education
+          serves as a gateway to improved financial literacy, which is a key
+          component of wealth generation. Therefore, in countries where women
+          have lesser educational attainment, they may face significant
+          challenges in accumulating wealth, underscoring the critical nature of
+          access to education for economic empowerment.
+          <br /> <br />
+          The map, in essence, offers more than a snapshot of educational
+          disparities; it suggests a roadmap for where interventions may be most
+          needed to improve financial outcomes for women. As Bannier's research
+          suggests, enhancing women's access to education could be
+          transformative, leading to increased financial literacy and subsequent
+          wealth. It is not merely the attainment of education that matters but
+          its quality and the subsequent opportunities it provides.
+          <br /> <br />
+          Therefore, addressing educational disparities is imperative for
+          closing the wealth gap between genders. Ensuring that women worldwide
+          have equal access to quality education can be a powerful catalyst for
+          economic development and gender equity. In light of Bannier's
+          findings, policymakers and educators should prioritize gender parity
+          in education to foster a more financially literate and economically
+          empowered female population.
+        </Typography>
         <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3} mb={1}>
           Gender employment trends
         </Typography>
