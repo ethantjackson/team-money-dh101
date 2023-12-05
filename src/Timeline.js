@@ -60,6 +60,7 @@ const Timeline = () => {
                       src={timelineItem.imgSrc}
                       alt={timelineItem.title}
                       width='100%'
+                      style={{ maxHeight: '30vh', objectFit: 'cover' }}
                     />
                     <Typography
                       variant='body2'
