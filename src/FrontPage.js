@@ -33,19 +33,21 @@ const FrontPage = () => {
           <Box
             sx={{
               height: '100vh',
-              width: '100vw',
+              width: '98vw',
               backgroundColor: 'white',
               position: 'fixed',
               top: '0',
+              left: '1vw',
             }}
           />
           <Box
             sx={{
               height: '154px',
-              width: '100vw',
+              width: '98vw',
               backgroundColor: 'white',
               position: 'fixed',
               top: '0',
+              left: '1vw',
               zIndex: '1',
             }}
           />
@@ -110,12 +112,12 @@ const FrontPage = () => {
         mb={'50vh'}
         sx={{
           marginTop: '50vh',
-          marginLeft: `calc(${initialPadding} * 0.8 * ${
+          marginLeft: `calc(max(1vw, ${initialPadding} * 0.8 * ${
             1 - scrollAmount / initialTopDist
-          })`,
-          marginRight: `calc(${initialPadding} * 0.8 * ${
+          }))`,
+          marginRight: `calc(max(1vw, ${initialPadding} * 0.8 * ${
             1 - scrollAmount / initialTopDist
-          })`,
+          }))`,
           backgroundColor: 'white',
           height: '100vh',
         }}
