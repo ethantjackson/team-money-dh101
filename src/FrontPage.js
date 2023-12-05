@@ -1,6 +1,5 @@
 import { Box, Link, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import IndividualCollectivismHist from './IndividualCollectivismHist';
 
 const FrontPage = () => {
   const initialPadding = '5vw';
