@@ -4,7 +4,7 @@ import ReactCardFlip from 'react-card-flip';
 
 const FrontPage = () => {
   const initialPadding = '5vw';
-  const navItems = ['Data', 'Timeline', 'Narrative', 'Resources'];
+  const navItems = ['Data', 'Narrative', 'Timeline', 'Resources'];
 
   const [scrollAmount, setScrollAmount] = useState();
   const [initialTopDist, setInitialTopDist] = useState();

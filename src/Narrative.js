@@ -159,7 +159,7 @@ const Narrative = () => {
         }}
       >
         <Typography variant='h1' mb={2}>
-          Exporing the Data
+          Exploring the Data
         </Typography>
         <Typography variant='h3' sx={{ fontWeight: 'bold' }} mb={-5}>
           Individualism & collectivism shape the wealth gap
