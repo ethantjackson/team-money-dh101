@@ -17,6 +17,14 @@ const Timeline = () => {
       <Navbar />
       <Container sx={{ paddingTop: '50px' }}>
         <Typography variant='h1'>A Gender-Wealth Gap History</Typography>
+        <Typography>
+          These hallmark events throughout the U.S.’s history have shaped
+          education and wealth disparities. By comparing these events with the
+          trends we have identified in the U.S. gender-wealth gap over time, the
+          U.S. can serve as a case study to determine how educational and
+          indivualist/collectivist factors may influence gender-wealth
+          disparity.
+        </Typography>
         <MuiTimeline position='alternate-reverse'>
           {timelineItems.map((timelineItem, idx) => (
             <TimelineItem key={timelineItem.title}>
