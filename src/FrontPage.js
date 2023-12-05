@@ -212,9 +212,17 @@ const FrontPage = () => {
           <Box
             sx={{ cursor: 'pointer' }}
             onClick={() => setIsFlipped(!isFlipped)}
+            loading='eager'
           >
-            <ReactCardFlip isFlipped={isFlipped}>
-              <Box sx={{ border: '1px solid red' }}>Front</Box>
+            <ReactCardFlip isFlipped={isFlipped} loading='eager'>
+              <Box>
+                <img
+                  height='500'
+                  src='/WillHeadshot.jpeg'
+                  loading='eager'
+                  alt='Will Headshot'
+                />
+              </Box>
               <Box sx={{ border: '1px solid blue' }}>Back </Box>
             </ReactCardFlip>
           </Box>
