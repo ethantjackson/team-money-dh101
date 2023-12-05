@@ -16,17 +16,48 @@ const Narrative = () => {
         </Typography>
         <IndividualCollectivismHist />
         <Typography>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto,
-          id quisquam ipsum molestias ea mollitia asperiores itaque excepturi,
-          in repudiandae illum cum labore voluptatum consectetur sequi alias
-          incidunt delectus aut! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sit error minus quibusdam aspernatur! Nostrum nobis
-          provident minima nisi, autem quos perferendis fugit! Accusamus libero
-          cupiditate sit autem eum quis reprehenderit? Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quas exercitationem saepe, mollitia
-          voluptatum dignissimos, deleniti obcaecati placeat debitis odit
-          assumenda ullam! Corrupti quo nihil deleniti error numquam. Tenetur,
-          eligendi animi!
+          The chart presents an intriguing illustration of the relationship
+          between individualism and wealth distribution across different
+          countries. It is indicative of the correlation identified by Binder in
+          her research, which suggests that "countries with more individualistic
+          cultures have significantly greater income redistribution and lower
+          after-tax income inequality."
+          <br />
+          <br />
+          From the analysis of the individuality scores, we can infer that
+          countries with higher scores, like the United States, Australia, and
+          the United Kingdom, prioritize personal autonomy and achievement. This
+          cultural inclination often correlates with policies that foster
+          entrepreneurial activities and offer a fertile ground for innovation
+          and economic growth. However, these opportunities alone can exacerbate
+          wealth gaps if not coupled with effective income redistribution
+          mechanisms.
+          <br />
+          <br />
+          The chart implies that individualistic countries have recognized this
+          potential pitfall and have implemented robust systems for income
+          redistribution, aligning with Binder's findings. These systems are
+          essential in mitigating the wealth gap, as they ensure that economic
+          growth benefits a broader segment of the population, thereby reducing
+          after-tax income inequality.
+          <br />
+          <br />
+          Interestingly, the countries with the highest individualism scores are
+          not necessarily the ones with the least wealth gap, suggesting that
+          while individualism is conducive to wealth creation, its role in
+          wealth distribution is more complex and dependent on a range of fiscal
+          policies and social welfare programs.
+          <br />
+          <br />
+          In conclusion, the chart reinforces the notion that individualism in a
+          culture can coexist with, and indeed promote, mechanisms for wealth
+          equality. It is not the cultural inclination towards individualism
+          itself that determines the wealth gap, but rather how a society's
+          policies harness individualistic traits to encourage economic
+          participation and ensure that the benefits of growth are equitably
+          shared among its citizens. This delicate balance is the key to
+          leveraging individualism in a way that contributes to a more
+          egalitarian economic landscape.
         </Typography>
         <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3}>
           Gender employment trends

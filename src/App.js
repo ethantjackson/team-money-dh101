@@ -2,6 +2,7 @@ import { Box, ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FrontPage from './FrontPage';
 import Narrative from './Narrative';
+import Timeline from './Timeline';
 
 let theme = createTheme({});
 theme = createTheme({
@@ -129,7 +130,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<FrontPage />} />
-          <Route path='/narrative' element={<Narrative />} />
+          <Route path='/Narrative' element={<Narrative />} />
+          <Route path='/Timeline' element={<Timeline />} />
         </Routes>
       </Router>
     </ThemeProvider>
