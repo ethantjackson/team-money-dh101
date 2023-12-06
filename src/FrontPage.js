@@ -324,7 +324,7 @@ const FrontPage = () => {
             mb={1}
             color='secondary'
           >
-            Website presentation notes
+            Website accessibility notes
           </Typography>
           <Grid
             container
