@@ -126,7 +126,7 @@ const Timeline = () => {
           pl={3}
           pr={3}
         >
-          A Gender-wealth gap history
+          A gender-wealth gap history
         </Typography>
         <Typography mt={1} pl={3} pr={3}>
           These hallmark events throughout the U.S.’s history have shaped
@@ -134,19 +134,21 @@ const Timeline = () => {
           events with the trends we have identified in the U.S. gender-wealth
           gap over time, the U.S. can serve as a case study to determine how
           educational and indivualist/collectivist factors may influence
-          gender-wealth disparity. Ultimately, the period of shrinking
-          employment disparity from 1991 to 2004 may reflect the cumulative
-          effect of progressive events expanding the educational and individual
-          rights of women. Here, expanding individual rights of women may be
-          indicative of growing individuality in American women (with
-          individuality being a trait that we have negatively correlated with
-          gender-wealth gaps). Conversely, periods of economic turmoil such as
-          the 2008 Great Recession exacerbate the employment and wealth
-          inequalities between men and women. Considering this history of the
-          gender-wealth gap, this United States case study supports the
-          narratives we have extracted from our data: closing educational gaps
-          and promoting individual rights of women are effective means of
-          closing the wealth gap.
+          gender-wealth disparity.
+          <br />
+          <br />
+          Ultimately, the period of shrinking employment disparity from 1991 to
+          2004 may reflect the cumulative effect of progressive events expanding
+          the educational and individual rights of women. Here, expanding
+          individual rights of women may be indicative of growing individuality
+          in American women (with individuality being a trait that we have
+          negatively correlated with gender-wealth gaps). Conversely, periods of
+          economic turmoil such as the 2008 Great Recession exacerbate the
+          employment and wealth inequalities between men and women. Considering
+          this history of the gender-wealth gap, this United States case study
+          supports the narratives we have extracted from our data: closing
+          educational gaps and promoting individual rights of women are
+          effective means of closing the wealth gap.
         </Typography>
         <MuiTimeline position='alternate-reverse'>
           {timelineItems.map((timelineItem, idx) => (
