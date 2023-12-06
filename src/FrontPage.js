@@ -57,7 +57,10 @@ const FrontPage = () => {
         sx={{
           paddingLeft: initialPadding,
           position: 'fixed',
-          bottom: `calc(50% + min(${Math.max(0, scrollAmount - 200)}px, 31vh))`,
+          bottom: `calc(50% + min(${Math.max(
+            0,
+            scrollAmount - 200
+          )}px, 50vh - 154px))`,
           zIndex: '2',
         }}
       >
@@ -131,7 +134,7 @@ const FrontPage = () => {
           }}
         >
           <Typography
-            variant='h2'
+            variant='h3'
             sx={{ fontWeight: 'bold' }}
             mb={1}
             color='secondary'
@@ -153,58 +156,45 @@ const FrontPage = () => {
             provided by the World Bank.
           </Typography>
           <Typography
-            variant='h2'
+            variant='h3'
             sx={{ fontWeight: 'bold' }}
             color='secondary'
             mt={3}
+            mb={2}
           >
             Our research questions
           </Typography>
-          <Box
-            sx={{
-              border: (theme) => `2px solid ${theme.palette.secondary.main}`,
-              borderRadius: '5px',
-            }}
-            mt={1}
-            p={2}
-          >
-            <Typography variant='h4' sx={{ fontWeight: 'bold' }}>
-              How has wealth inequality between genders evolved over time? Are
-              gender-based wealth inequalities becoming more or less pronounced
-              over time?
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              border: (theme) => `2px solid ${theme.palette.secondary.main}`,
-              borderRadius: '5px',
-            }}
-            mt={2}
-            p={2}
-          >
-            <Typography variant='h4' sx={{ fontWeight: 'bold' }}>
-              How does a country’s placement on the individualism/collectivism
-              spectrum affect the wealth inequality between genders in that
-              country?
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              border: (theme) => `2px solid ${theme.palette.secondary.main}`,
-              borderRadius: '5px',
-            }}
-            mt={2}
-            p={2}
-          >
-            <Typography variant='h4' sx={{ fontWeight: 'bold' }}>
-              How significant is the impact of having education on the acquiring
-              of wealth?
-            </Typography>
-          </Box>
           <Typography
-            variant='h2'
+            mt={2}
+            mb={2}
+            variant='h4'
+            sx={{ fontWeight: '600', textAlign: 'center' }}
+          >
+            How significant is the impact of having education on the acquiring
+            of wealth?
+          </Typography>
+          <Box
+            sx={{
+              margin: 'auto',
+              width: '75%',
+              height: '1px',
+              backgroundColor: (theme) => theme.palette.secondary.main,
+            }}
+          />
+          <Typography
+            mt={2}
+            variant='h4'
+            sx={{ fontWeight: '600', textAlign: 'center' }}
+          >
+            How does a country’s placement on the individualism/collectivism
+            spectrum affect the wealth inequality between genders in that
+            country?
+          </Typography>
+          <Typography
+            variant='h3'
             sx={{ fontWeight: 'bold' }}
             mt={3}
+            mb={2}
             color='secondary'
           >
             About us

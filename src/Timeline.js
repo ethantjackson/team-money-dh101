@@ -7,7 +7,7 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { useMediaQuery, Box, Container, Typography } from '@mui/material';
+import { useMediaQuery, Box, Container, Typography, Grid } from '@mui/material';
 
 const Timeline = () => {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -16,18 +16,139 @@ const Timeline = () => {
     <>
       <Navbar />
       <Container sx={{ paddingTop: '50px' }}>
-        <Typography variant='h2' sx={{ fontWeight: 'bold' }}>
+        <Typography variant='h2' sx={{ fontWeight: 'bold' }} mt={3} mb={2}>
+          The United States: a case study
+        </Typography>
+        <Box sx={{ backgroundColor: 'white' }} pt={1} pb={2} pl={3} pr={3}>
+          <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={1} mb={1}>
+            Gender employment trends
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} md={6} sx={{ overflow: 'auto' }}>
+              <iframe
+                title='Men Employment Rates 15+'
+                width='500'
+                height='371'
+                seamless
+                frameBorder='0'
+                scrolling='no'
+                src='https://docs.google.com/spreadsheets/d/e/2PACX-1vS2jd9skicArGL5f5m56lzG-jTSfyDZfXTusgFhfqQ9_zcmRv0t5nShsqqdg0uyz7uPb95neUYCBFWg/pubchart?oid=1385848547&amp;format=interactive'
+              />
+            </Grid>
+            <Grid item xs={12} md={6} sx={{ overflow: 'auto' }}>
+              <iframe
+                title='Women Employment Rates 15+'
+                width='500'
+                height='361'
+                seamless
+                frameBorder='0'
+                scrolling='no'
+                src='https://docs.google.com/spreadsheets/d/e/2PACX-1vS2jd9skicArGL5f5m56lzG-jTSfyDZfXTusgFhfqQ9_zcmRv0t5nShsqqdg0uyz7uPb95neUYCBFWg/pubchart?oid=969139854&amp;format=interactive'
+              />
+            </Grid>
+            <Grid item xs={12} sx={{ overflow: 'auto', textAlign: 'center' }}>
+              <iframe
+                title='Women Employment Rates 15+'
+                width='500'
+                height='361'
+                seamless
+                frameBorder='0'
+                scrolling='no'
+                src='https://docs.google.com/spreadsheets/d/e/2PACX-1vS2jd9skicArGL5f5m56lzG-jTSfyDZfXTusgFhfqQ9_zcmRv0t5nShsqqdg0uyz7uPb95neUYCBFWg/pubchart?oid=1306061543&amp;format=interactive'
+              />
+            </Grid>
+            <Typography>
+              The graph on the right represents the employment-to-population
+              ratio of women ages 15+ in percentage form in the United States.
+              The chart is based on an ILO estimate which is internationally
+              comparable labor statistics. This is very beneficial in helping us
+              understand the wealth gap between men and women due to the ability
+              to compare the amount of each gender in the workforce to the chart
+              that follows which shows the male employment rate. As the chart
+              shows, on average every year since 1991 there were fewer females,
+              percentage-wise, than males in the workforce. Although these
+              illustrations represent America only, it is consistent with other
+              countries where the percentage of females was less than the
+              percentage of men employed. This is due to many factors but in
+              correlation to this project, we looked to compare the two genders
+              and see its correlation with individualism and social norms in the
+              respected country. Although individualism and the values of
+              autonomy help with women’s goals and choices to help them acquire
+              wealth, without closing this gap the overall general wealth gap
+              won't close(Davis and Williamson, 2019) With the United States the
+              participation was not significantly different but there was a
+              common trend of being less than men. This difference of men being
+              more in the workforce than women is a factor in the widening
+              wealth gap. To acquire wealth requires to be employed or working,
+              and as long as the percentages stay in this trend it would be
+              harder for the gap to close.
+              <br />
+              <br />
+              The left chart on the other hand shows the employment to
+              population ratio of men ages 15+ in percentage from in the United
+              States. Comparing the percentages of men and women employment
+              ratios shows that in the United States, there is more employment
+              in males than females every year from 1991-2022. This includes
+              where the percentage of men significantly dipped in 2020. Both
+              genders had a dip in the percentages in the workforce due to the
+              global pandemic. This gap in percentages correlates with our
+              research because as there are more men working it will keep the
+              wealth gap. As explained in “The gender wealth gap in the United
+              States: Trends and explanations'', “In the United States, the main
+              reason to expect a gender wealth gap is that men earn more than
+              women… Men have more income to save and more access to
+              wealth-building employer benefits'' (Lee, 2022). Due to men
+              working at higher rates, they are more likely to acquire more
+              income which ultimately leads to the creation of wealth in various
+              ways. Although men and women might be doing the same work there is
+              different compensations and participation in the workforce that
+              keeps this gap from closing. Our research considers that there is
+              also various factors that may influence the wealth gap but this is
+              a major one to consider.
+              <br />
+              <br />
+              Finally, the bottom chart helps visualize the evolution of
+              employment disparities between genders. This employment disparity
+              can serve as an indicator of wealth disparity (which could
+              potentially be more severe than employment trends indicate, when
+              considered alongside possible gender-based pay gaps). Considering
+              this evolution of employment and, in turn, wealth disparity, we
+              can refer to the following timeline to study how various events
+              have affected gender-wealth gaps in America.
+            </Typography>
+          </Grid>
+        </Box>
+        <Typography
+          variant='h3'
+          sx={{ fontWeight: 'bold' }}
+          mt={3}
+          mb={2}
+          pl={3}
+          pr={3}
+        >
           A Gender-Wealth Gap History
         </Typography>
-        <Typography>
+        <Typography mt={1} pl={3} pr={3}>
           These hallmark events throughout the U.S.’s history have shaped
           education, individualism, and wealth disparities. By comparing these
           events with the trends we have identified in the U.S. gender-wealth
           gap over time, the U.S. can serve as a case study to determine how
           educational and indivualist/collectivist factors may influence
-          gender-wealth disparity.
+          gender-wealth disparity. Ultimately, the period of shrinking
+          employment disparity from 1991 to 2004 may reflect the cumulative
+          effect of progressive events expanding the educational and individual
+          rights of women. Here, expanding individual rights of women may be
+          indicative of growing individuality in American women (with
+          individuality being a trait that we have negatively correlated with
+          gender-wealth gaps). Conversely, periods of economic turmoil such as
+          the 2008 Great Recession exacerbate the employment and wealth
+          inequalities between men and women. Considering this history of the
+          gender-wealth gap, this United States case study supports the
+          narratives we have extracted from our data: closing educational gaps
+          and promoting individual rights of women are effective means of
+          closing the wealth gap.
         </Typography>
-        <MuiTimeline position='alternate'>
+        <MuiTimeline position='alternate-reverse'>
           {timelineItems.map((timelineItem, idx) => (
             <TimelineItem key={timelineItem.title}>
               <TimelineSeparator sx={{ color: 'white' }}>
@@ -38,7 +159,7 @@ const Timeline = () => {
               </TimelineSeparator>
               <TimelineContent
                 sx={
-                  idx % 2 !== 0
+                  idx % 2 === 0
                     ? {
                         backgroundColor: (theme) => theme.palette.primary.main,
                         borderRadius: '15px',
