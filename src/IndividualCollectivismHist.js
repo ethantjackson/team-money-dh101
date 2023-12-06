@@ -3,7 +3,7 @@ import { BarChart } from '@mui/x-charts/BarChart';
 
 const IndividualCollectivismHist = () => {
   return (
-    <Box sx={{ overflow: 'scroll' }} m={3}>
+    <Box sx={{ overflow: 'auto' }} m={3}>
       <BarChart
         dataset={data}
         xAxis={[

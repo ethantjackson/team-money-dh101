@@ -1,14 +1,14 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Grid, Link, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
 const FrontPage = () => {
   const initialPadding = '5vw';
-  const navItems = ['Data', 'Narrative', 'Timeline', 'Resources'];
+  const navItems = ['Data', 'Narrative', 'Case Study', 'Resources'];
 
   const [scrollAmount, setScrollAmount] = useState();
   const [initialTopDist, setInitialTopDist] = useState();
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,11 +103,12 @@ const FrontPage = () => {
         </Box>
         <Box
           sx={{
-            height: '1px',
+            height: '0.5px',
             width: `${90 * Math.min(1, scrollAmount / initialTopDist)}vw`,
-            backgroundColor: (theme) => theme.palette.secondary.main,
+            // backgroundColor: (theme) => theme.palette.primary.main,
+            backgroundColor: '#eee',
           }}
-          mt={1}
+          mt={2}
         />
       </Box>
       <Box
@@ -135,13 +136,133 @@ const FrontPage = () => {
         >
           <Typography
             variant='h3'
-            sx={{ fontWeight: 'bold' }}
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+            color='secondary'
+            mt={4}
+            mb={2}
+          >
+            Our research questions
+          </Typography>
+          <Typography
+            mt={2}
+            mb={2}
+            variant='h4'
+            sx={{ fontWeight: '600', textAlign: 'center' }}
+          >
+            Do education inequalities across genders contribute to gender-wealth
+            gaps?
+          </Typography>
+          <Box
+            sx={{
+              margin: 'auto',
+              width: { xs: '90%', lg: '75%', xl: '45%' },
+              height: '1px',
+              backgroundColor: (theme) => theme.palette.secondary.main,
+            }}
+          />
+          <Typography
+            mt={2}
+            variant='h4'
+            sx={{ fontWeight: '600', textAlign: 'center' }}
+          >
+            How does a country’s placement on the individualism-collectivism
+            spectrum affect its gender-wealth gap?
+          </Typography>
+          <Typography
+            variant='h3'
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+            mt={5}
+            mb={2}
+            color='secondary'
+          >
+            Meet the team
+          </Typography>
+          <Grid
+            container
+            sx={{
+              width: { xs: '90%', lg: '75%', xl: '45%' },
+              margin: 'auto',
+              justifyContent: 'center',
+            }}
+            spacing={1}
+          >
+            {groupMembers.map((groupMember) => (
+              <Grid
+                key={groupMember.name}
+                xs={12}
+                sm={6}
+                md={4}
+                sx={{
+                  cursor: 'pointer',
+                }}
+                onClick={() =>
+                  setIsFlipped({
+                    ...isFlipped,
+                    [groupMember.name]: !isFlipped[groupMember.name],
+                  })
+                }
+                p={1}
+              >
+                <ReactCardFlip
+                  isFlipped={isFlipped[groupMember.name]}
+                  loading='eager'
+                >
+                  <Box
+                    sx={{
+                      height: { xs: '350px', xl: '400px' },
+                      width: '100%',
+                      overflow: 'hidden',
+                      borderRadius: '15px',
+                    }}
+                  >
+                    <img
+                      src={groupMember.headshot}
+                      loading='eager'
+                      alt={groupMember.name}
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Box>
+                  <Box
+                    sx={{
+                      height: { xs: '350px', xl: '400px' },
+                      backgroundColor: (theme) => theme.palette.secondary.main,
+                      borderRadius: '15px',
+                    }}
+                  >
+                    Back
+                  </Box>
+                </ReactCardFlip>
+              </Grid>
+            ))}
+            <Typography
+              variant='body2'
+              color='grey'
+              mt={1}
+              sx={{ textAlign: 'center' }}
+            >
+              Click on the headshots to learn more about each member.
+            </Typography>
+          </Grid>
+          <Typography
+            variant='h3'
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+            mt={3}
             mb={1}
             color='secondary'
           >
             About the project
           </Typography>
-          <Typography>
+          <Typography
+            sx={{
+              textAlign: 'center',
+              width: { xs: '90%', lg: '75%', xl: '45%' },
+              margin: 'auto',
+            }}
+          >
             This is a group project for UCLA's Digital Humanities 101, completed
             in Fall 2022 under the direction of Dr. Wendy Perla Kurtz. Our
             collective efforts involved leveraging data processing and
@@ -155,71 +276,38 @@ const FrontPage = () => {
             </Link>{' '}
             provided by the World Bank.
           </Typography>
-          <Typography
-            variant='h3'
-            sx={{ fontWeight: 'bold' }}
-            color='secondary'
-            mt={3}
-            mb={2}
-          >
-            Our research questions
-          </Typography>
-          <Typography
-            mt={2}
-            mb={2}
-            variant='h4'
-            sx={{ fontWeight: '600', textAlign: 'center' }}
-          >
-            How significant is the impact of having education on the acquiring
-            of wealth?
-          </Typography>
-          <Box
-            sx={{
-              margin: 'auto',
-              width: '75%',
-              height: '1px',
-              backgroundColor: (theme) => theme.palette.secondary.main,
-            }}
-          />
-          <Typography
-            mt={2}
-            variant='h4'
-            sx={{ fontWeight: '600', textAlign: 'center' }}
-          >
-            How does a country’s placement on the individualism/collectivism
-            spectrum affect the wealth inequality between genders in that
-            country?
-          </Typography>
-          <Typography
-            variant='h3'
-            sx={{ fontWeight: 'bold' }}
-            mt={3}
-            mb={2}
-            color='secondary'
-          >
-            About us
-          </Typography>
-          <Box
-            sx={{ cursor: 'pointer' }}
-            onClick={() => setIsFlipped(!isFlipped)}
-            loading='eager'
-          >
-            <ReactCardFlip isFlipped={isFlipped} loading='eager'>
-              <Box>
-                <img
-                  height='500'
-                  src='/WillHeadshot.jpeg'
-                  loading='eager'
-                  alt='Will Headshot'
-                />
-              </Box>
-              <Box sx={{ border: '1px solid blue' }}>Back </Box>
-            </ReactCardFlip>
-          </Box>
         </Box>
       </Box>
     </>
   );
 };
+
+const groupMembers = [
+  {
+    name: 'Will Kegelmeyer',
+    headshot: '/WillHeadshot.jpeg',
+    description: 'back',
+  },
+  {
+    name: 'Joseph Soliman',
+    headshot: '/WillHeadshot.jpeg',
+    description: 'back',
+  },
+  {
+    name: 'Alexa Lee',
+    headshot: '/WillHeadshot.jpeg',
+    description: 'back',
+  },
+  {
+    name: 'Haik Divanyan',
+    headshot: '/WillHeadshot.jpeg',
+    description: 'back',
+  },
+  {
+    name: 'Ethan Jackson',
+    headshot: '/WillHeadshot.jpeg',
+    description: 'back',
+  },
+];
 
 export default FrontPage;

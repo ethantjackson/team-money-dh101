@@ -2,7 +2,7 @@ import { Box, Container, Grid, Link } from '@mui/material';
 import React from 'react';
 
 const Navbar = () => {
-  const navItems = ['Data', 'Narrative', 'Timeline', 'Resources'];
+  const navItems = ['Data', 'Narrative', 'Case Study', 'Resources'];
 
   return (
     <Box

@@ -126,7 +126,7 @@ const Timeline = () => {
           pl={3}
           pr={3}
         >
-          A Gender-Wealth Gap History
+          A Gender-wealth gap history
         </Typography>
         <Typography mt={1} pl={3} pr={3}>
           These hallmark events throughout the U.S.’s history have shaped
