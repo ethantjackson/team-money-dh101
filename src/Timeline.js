@@ -7,15 +7,13 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { useMediaQuery, Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography, Grid } from '@mui/material';
 
 const Timeline = () => {
-  const isSmallScreen = useMediaQuery('(max-width: 600px)');
-  console.log(isSmallScreen);
   return (
     <>
       <Navbar />
-      <Container sx={{ paddingTop: '50px' }}>
+      <Container sx={{ paddingTop: '50px', paddingBottom: '50px' }}>
         <Typography variant='h2' sx={{ fontWeight: 'bold' }} mt={3} mb={2}>
           The United States: a case study
         </Typography>
@@ -214,12 +212,36 @@ const Timeline = () => {
             </TimelineItem>
           ))}
         </MuiTimeline>
+        <Typography variant='h3' mt={3} mb={1}>
+          Timeline Bibliography
+        </Typography>
+        {biblioTimelineEntries.map((entry) => (
+          <Typography variant='body2' color='grey' mt={2}>
+            {entry}
+          </Typography>
+        ))}
       </Container>
     </>
   );
 };
 
 const timelineItems = [
+  {
+    title: '1917: Silent Sentinels',
+    text: "The Silent Sentinels were protestors who picketed around the White House for women's suffrage. They pressured President Wilson to endrse their movement through his militaristic doctrine. This democratic advancement allowed women to gain more rights which added to the culture of individualism.",
+    imgSrc:
+      'https://www.nps.gov/bepa/learn/images/SuffragePicketing1az.jpg?maxwidth=650&autorotate=false&quality=78&format=webp',
+    source:
+      'Image Source: Silent Sentinels. National Woman’s Party Protests During World War I, National Park Service, https://www.nps.gov/articles/national-womans-party-protests-world-war-i.htm. Accessed 6 Dec. 2023.',
+  },
+  {
+    title: '1920: 19th Amendment',
+    text: 'In 1919, the 19th Amendment for woman suffrage was passed by Congress and in 1920 it was ratified by the states. This amendment gave women the right to vote although only white women were allowed to.',
+    imgSrc:
+      'https://www.thenation.com/cdn-cgi/image/width=896,quality=80,format=auto/wp-content/uploads/2015/08/19th_amendment_loc_img.jpg',
+    source:
+      'Image Source: 19th Amendment. August 26, 1920: The 19th Amendment Goes Into Effect, Granting Women the Vote, The Nation, https://www.thenation.com/article/archive/august-26-1920-the-19th-amendment-is-ratified-granting-women-the-vote/. Accessed 6 Dec. 2023.',
+  },
   {
     title: '1954: Brown v. Board of Education',
     text: 'The Brown v. Board of Education case ruled that racial segregation in public schools was unconstitutional, leading to egalitarian racial ideals in education. This helped set a precedent for legal protections for minority groups although unequal educational opportunities still remained.',
@@ -288,6 +310,15 @@ const timelineItems = [
     source:
       'Image Source: COVID-19 Pandemic Online Learning. Schooling During the COVID-19 Pandemic, United States Census Bureau, https://www.census.gov/library/stories/2020/08/schooling-during-the-covid-19-pandemic.html. Accessed 4 Dec. 2023. ',
   },
+];
+
+const biblioTimelineEntries = [
+  '19th Amendment. August 26, 1920: The 19th Amendment Goes Into Effect, Granting Women the Vote, The Nation, https://www.thenation.com/article/archive/august-26-1920-the-19th-amendment-is-ratified-granting-women-the-vote/. Accessed 6 Dec. 2023.',
+  'Black, Derek W. “Abandoning the Federal Role in Education: The Every Student Succeeds Act.” California Law Review, vol. 105, no. 5, 2017, pp. 1309–74. JSTOR, https://www.jstor.org/stable/26577710. Accessed 3 Dec. 2023.',
+  'Brauer, Carl M. “Women Activists, Southern Conservatives, and the Prohibition of Sex Discrimination in Title VII of the 1964 Civil Rights Act.” The Journal of Southern History, vol. 49, no. 1, 1983, pp. 37–56. JSTOR, https://doi.org/10.2307/2209305. Accessed 3 Dec. 2023.',
+  'Brown v. Board of Education. Brown v. Board of Education, The Case That Changed America, Legal Defense Fund, https://www.naacpldf.org/brown-vs-board/. Accessed 4 Dec. 2023.',
+  'Carson, Clayborne. “The Fateful Turn toward Brown v. Board of Education.” Washington History, vol. 16, no. 2, 2004, pp. 6–10. JSTOR, http://www.jstor.org/stable/40073391. Accessed 3 Dec. 2023.',
+  'CHUDACOFF, HOWARD P. “The Civil Rights Restoration Act and Enforcement of Title IX.” Changing the Playbook: How Power, Profit, and Politics Transformed College Sports, University of Illinois Press, 2015, pp. 83–104. JSTOR, http://www.jstor.org/stable/10.5406/j.ctt19705m9.9. Accessed 3 Dec. 2023.',
 ];
 
 export default Timeline;
