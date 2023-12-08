@@ -3,7 +3,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import Navbar from "./Navbar";
 
-const Resources = () => {
+const DataCritique = () => {
   // Define a custom style for the yellow divider
   const dividerStyle = {
     height: "5px",
@@ -13,11 +13,10 @@ const Resources = () => {
   return (
     <>
       <Navbar />
-      {/* BIBLIOGRAPHY Section */}
       <Box sx={{ backgroundColor: "#f5f5f5", paddingY: 4 }}>
         <Container sx={{ textAlign: "center" }}>
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 2 }}>
-            BIBLIOGRAPHY
+            Data / Critique
           </Typography>
           <Typography paragraph>
             This page lists all the sources used throughout this website as well as a few details on
@@ -35,9 +34,9 @@ const Resources = () => {
               },
             }}
             startIcon={<GetAppIcon />}
-            href="https://docs.google.com/document/d/1m4P7RYIyUFyiMqHfiYtwXHwlrSt-7jjX7TrkAoq546w/edit?usp=sharing"
+            href="#dummy-link"
           >
-            DOWNLOAD THE ANNOTATED BIBLIOGRAPHY
+            Explore the full database
           </Button>
         </Container>
       </Box>
@@ -45,11 +44,10 @@ const Resources = () => {
       {/* Yellow Divider */}
       <Box sx={dividerStyle} />
 
-      {/* The "Three Layers" Section */}
       <Box sx={{ backgroundColor: "#f5f5f5", paddingY: 4 }}>
         <Container>
           <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
-            The "Three Layers" of Digital Humanities Projects
+            About the Database
           </Typography>
         </Container>
       </Box>
@@ -61,30 +59,32 @@ const Resources = () => {
       <Box sx={{ backgroundColor: "#f5f5f5", paddingY: 4 }}>
         <Container>
           <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
-            PROCESSING
+            Data Critique
           </Typography>
           <Typography paragraph>
-            MEOW MEOW Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum
-            facilisis tristique. Vivamus vitae pretium nisi, eget malesuada felis. Mauris consequat
-            justo imperdiet elit dapibus laoreet. Pellentesque condimentum leo sed lobortis aliquet.
-            Donec euismod non mauris sit amet congue. In eget massa sit amet ligula ullamcorper
-            venenatis dignissim ultricies velit. Aliquam sit amet dui consequat, feugiat nisi non,
-            fermentum lacus. Vestibulum feugiat fermentum varius. Sed rutrum purus et mi consequat
-            hendrerit. Maecenas libero diam, tristique sed tortor non, luctus molestie erat.
-            Pellentesque consectetur eros vitae purus varius, et pharetra tellus dictum.
-            Pellentesque fermentum malesuada urna vel consectetur. Aliquam viverra sapien ut
-            bibendum tincidunt. Pellentesque ultricies nisl justo.
+            Before we could create an argument with data, we needed to critically analyze the
+            politics of data collection processes & outcomes.
           </Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum facilisis
-          tristique. Vivamus vitae pretium nisi, eget malesuada felis. Mauris consequat justo
-          imperdiet elit dapibus laoreet. Pellentesque condimentum leo sed lobortis aliquet. Donec
-          euismod non mauris sit amet congue. In eget massa sit amet ligula ullamcorper venenatis
-          dignissim ultricies velit. Aliquam sit amet dui consequat, feugiat nisi non, fermentum
-          lacus. Vestibulum feugiat fermentum varius. Sed rutrum purus et mi consequat hendrerit.
-          Maecenas libero diam, tristique sed tortor non, luctus molestie erat. Pellentesque
-          consectetur eros vitae purus varius, et pharetra tellus dictum. Pellentesque fermentum
-          malesuada urna vel consectetur. Aliquam viverra sapien ut bibendum tincidunt. Pellentesque
-          ultricies nisl justo.
+          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
+            How was the data generated?
+          </Typography>
+          What incentive is there for The Bureau to investigate the drone campaign? What are the
+          stakes & who are the stakeholders?
+          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
+            What are the original sources?
+          </Typography>
+          What incentive is there for The Bureau to investigate the drone campaign? What are the
+          stakes & who are the stakeholders?
+          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
+            What information is left out?
+          </Typography>
+          What incentive is there for The Bureau to investigate the drone campaign? What are the
+          stakes & who are the stakeholders?
+          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 1 }} gutterBottom>
+            Who does the dataset represent?
+          </Typography>
+          What incentive is there for The Bureau to investigate the drone campaign? What are the
+          stakes & who are the stakeholders?
         </Container>
       </Box>
 
@@ -168,4 +168,4 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default DataCritique;
