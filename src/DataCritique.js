@@ -197,6 +197,39 @@ const DataCritique = () => {
             contradictory insights from ours, we would not be able to include
             and analyze the discrepancies therein.
           </Typography>
+          <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3} mb={1}>
+            Secondary literature findings
+          </Typography>
+          <Typography>
+            To supplement potential shortcomings of our primary data set, we
+            also explored a variety of secondary sources to inform our
+            understandings. The collective idea that has been concluded from
+            researching this project by scholars is that there are social
+            reasons such as individualism and public policy(involving education)
+            that contribute to income inequality. With there being income
+            inequality between genders it then leads to a wealth gap. In
+            addition to stating that there is a problem, some sources looked to
+            find how the gap will close. This is where there are questions about
+            the topic; whether the gap will close on its own or would we as a
+            society need to aid in closing the gap. Some even question if the
+            gap will ever close based on the social structures that are set in
+            place. The predominant view of the topic agreed by two scholars,
+            Carola Conces Binder and James H. Tiessen state that the gap is
+            based on individualism and collectivism but there are different
+            perspectives by Hong Vo Duc and Chi Minh Ho that say that background
+            and demographic factors are the major reasons for the difference in
+            wealth accumulation. This is why the level of education and its
+            effect on wealth accumulation is researched in this project as well
+            because some scholars believe that this is a very influential factor
+            in wealth accumulation, as stated by Christina E. Bannier and
+            Stephanie R. Psaki. In general the higher the education the higher
+            the salary and when there is equal education between genders there
+            is still a gap but not as large, as what the sources were stating.
+            All scholars agree that there is a wealth gap between genders, but
+            the reason why there is a difference between scholars and this
+            project is to find out what are the most influential factors by
+            focusing on individualism and education.
+          </Typography>
         </Box>
       </Container>
     </>

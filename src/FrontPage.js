@@ -1,4 +1,3 @@
-import HearingDisabledIcon from '@mui/icons-material/HearingDisabled';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import PaletteIcon from '@mui/icons-material/Palette';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
