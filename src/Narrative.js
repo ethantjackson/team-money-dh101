@@ -228,7 +228,7 @@ const Narrative = () => {
           >
             <img
               src='/WomenBusinessLaw.png'
-              alt='Average Years of Schooling for Women Globally'
+              alt='Women Pay Indicator Score'
               width='100%'
             />
           </Box>
