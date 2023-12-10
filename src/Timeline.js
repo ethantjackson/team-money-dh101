@@ -117,7 +117,7 @@ const Timeline = () => {
           </Grid>
         </Box>
         <Typography
-          variant='h3'
+          variant='h2'
           sx={{ fontWeight: 'bold' }}
           mt={3}
           mb={2}
