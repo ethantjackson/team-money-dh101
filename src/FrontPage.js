@@ -1,4 +1,5 @@
 import HearingDisabledIcon from '@mui/icons-material/HearingDisabled';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import PaletteIcon from '@mui/icons-material/Palette';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { Box, Grid, Link, Typography } from '@mui/material';
@@ -446,11 +447,11 @@ const webNotes = [
     icon: <SmartToyIcon color='primary' sx={{ width: '80%', height: '80%' }} />,
   },
   {
-    title: 'No audio media',
+    title: 'Inclusive media',
     description:
-      'To be inclusive of audio-impaired individuals, we avoided using audio-based media.',
+      'To be inclusive of audio-impaired individuals, we avoided using audio-based media. For motion-sensitive individuals, we avoid disorienting moving elements.',
     icon: (
-      <HearingDisabledIcon
+      <VolunteerActivismIcon
         color='primary'
         sx={{ width: '80%', height: '80%' }}
       />
