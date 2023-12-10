@@ -213,7 +213,7 @@ const Timeline = () => {
           ))}
         </MuiTimeline>
         <Typography variant='h3' mt={3} mb={1}>
-          Timeline Bibliography
+          Timeline bibliography
         </Typography>
         {biblioTimelineEntries.map((entry) => (
           <Typography variant='body2' color='grey' mt={2}>
