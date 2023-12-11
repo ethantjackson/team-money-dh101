@@ -234,26 +234,26 @@ const Narrative = () => {
           </Box>
           <Typography>
             This bar chart compares the Women, Business and the Law: Pay
-            Indicator Score between multiple regions and income levels. The Pay
-            indicator measures laws and regulations affecting a woman’s pay
-            (Hyland Et al, 2020). The data highlights that there is an
+            Indicator Score between multiple regions and income levels. The pay
+            indicator score measures laws and regulations affecting a woman’s
+            pay (Hyland Et al, 2020). The data highlights that there is an
             association between country income and laws correlated to women’s
             rights. The authors discuss how causation can go in both directions.
             Expansion of women’s economic rights increases investments in human
             capital which increases GDP. However, access to technology that is
             associated with higher income can drive social reform. Thus, women’s
             rights can improve national income and an increase in national
-            income can improve upon women’s rights. There is also a wide gap
-            throughout the data. North America has the highest Pay Indicator
-            Score with an 88 average between the countries within the region.
-            The Middle East and North Africa have the lowest Pay Indicator Score
-            with a 48 average. While there may be an association between income
-            level and laws supporting women, there is plenty of grey area among
-            the data. For example, China has a GDP of $18 Trillion while only
-            having a Pay Indicator Score of 25. However Liberia has a GDP of
-            only $4 Billion and has a Pay Indicator Score of 100. The United
-            States, with the largest GDP in the world, has a Pay Indicator Score
-            of 75.
+            income can improve women’s rights (Hyland Et al, 2020). There is
+            also a wide gap throughout the data. North America has the highest
+            Pay Indicator Score with an 88 average between the countries within
+            the region. The Middle East and North Africa have the lowest pay
+            indicator score with a 48 average. While there may be an association
+            between income level and laws supporting women, there is plenty of
+            grey area among the data. For example, China has a GDP of $18
+            Trillion while only having a pay indicator score of 25. However,
+            Liberia has a GDP of only $4 Billion and has a pay indicator score
+            of 100. The United States, with the largest GDP in the world, has a
+            pay indicator score of 75.
             <br />
             <br />
             In any case, securing women's economic rights (through both legal
@@ -337,24 +337,25 @@ const Narrative = () => {
             This dataset explores the differences in Expected Years of School
             for Women within countries in the European Union. The data ranges
             from just under 12 years in Romania to just under 14 years in the
-            Netherlands. As seen in data produced by UNESCO Institute for
-            Statistic, school life expectancy for women in Europe and North
+            Netherlands. As seen in data produced by the UNESCO Institute for
+            Statistics, school life expectancy for women in Europe and North
             America is the highest in the world. The average amount of education
-            for women in this region is actually higher than men. This is true
-            in Latin America, the Caribean, Southern Asia, East and Southeast
-            Asia, and across the globe on average. Actually, it is mostly in the
+            for women in this region is actually higher than for men. This is
+            true in Latin America, the Caribbean, Southern Asia, East and
+            Southeast Asia, and across the globe on average. It is mostly in the
             least developed countries where the school life expectancy is higher
-            for boys than girls at 9.7 vs 8.9 years. This is a significant
-            development since 1970 where men outpaced women in years of
-            schooling in every major region around the globe. While years spent
-            in school has increased for everyone since 1970, there is still
-            significant work to be done to decrease the educational gap created
-            by poverty. For example, the average years in school for boys around
-            the world in 1970 (8.6 years) is around the same as the average
-            years for girls in Subsaharan Africa today (8.8 years). This gap in
-            education explains the intersection between extreme poverty and
+            for boys than girls at 9.7 vs 8.9 years (Montoya 2019). This is a
+            significant development since 1970 when men outpaced women in years
+            of schooling in every major region around the globe. While the years
+            spent in school have increased for everyone since 1970, there is
+            still significant work to be done to decrease the educational gap
+            created by poverty. For example, the average years in school for
+            boys around the world in 1970 (8.6 years) is around the same as the
+            average years for girls in Subsaharan Africa today (8.8 years). This
+            education gap explains the intersection between extreme poverty and
             gender inequality around the world. It can be determined that there
-            are economic reasons for the gender-education gap as well as social.
+            are economic reasons for the gender-education gap as well as social
+            (Montoya 2019).
           </Typography>
         </Box>
       </Container>

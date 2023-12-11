@@ -61,17 +61,17 @@ const Resources = () => {
             selecting sources, we made sure to prioritize scholarly articles and
             academic journals. The sources that we chose are needed to help
             elaborate on our topic for the benefit of the reader. In How to Get
-            Started in Data Visualization, Nathan provides a good anecdote that
-            explains the benefit of our secondary sources. He explains,
+            Started in Data Visualization, Nathan Yau provides a good anecdote
+            that explains the benefit of our secondary sources. He explains,
             “Sometimes we forget that not everyone understands data. Means,
             medians, standard errors, skew, and distributions can be foreign
             concepts. It's our job to explain these technical concepts to a
             non-technical audience. We have to answer that all-important
-            question, ‘So what?’”.
+            question, ‘So what?’” (Yau 2013).
             <br />
             <br />
             We chose rich academic resources that allowed us to expand upon our
-            resource questions. These secondary sources helped us expand upon
+            research questions. These secondary sources helped us expand upon
             the data we got from the Gender Data Portal. For example, Gendered
             Laws and Women in the Workforce gave us the academic framework to
             acknowledge that gender equality and a country’s income level are
@@ -81,10 +81,9 @@ const Resources = () => {
             in access to education from regions around the country. It also
             allowed us to understand that the least developed countries in the
             world tend to have the greatest wealth gap in a global education
-            system where women are beginning to outpace men in highly developed
-            countries. We even found secondary that found a correlation between
-            the individuality of a country and its gender equality in
-            employment.
+            system where women are beginning to outpace men. We even found
+            secondary sources that found a correlation between the individuality
+            of a country and its gender equality in employment.
           </Typography>
           <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3} mb={1}>
             Processing
