@@ -417,6 +417,22 @@ const FrontPage = () => {
           >
             Click to learn about how we made an inclusive website!
           </Typography>
+          <Typography
+            variant='h3'
+            sx={{ textAlign: 'center', fontWeight: 'bold' }}
+            color='secondary'
+          >
+            Acknowledgements
+          </Typography>
+          <Typography
+            variant='body2'
+            sx={{ textAlign: 'center' }}
+            mt={1}
+            mb={3}
+          >
+            We would like to thank our teaching assistant, Nick Schwieterman,
+            for his guidance and support throughout this project!
+          </Typography>
         </Box>
       </Box>
     </>
