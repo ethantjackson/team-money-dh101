@@ -305,7 +305,7 @@ const FrontPage = () => {
             }}
           >
             This is a group project for UCLA's Digital Humanities 101, completed
-            in Fall 2022 under the direction of Dr. Wendy Perla Kurtz. Our
+            in Fall 2023 under the direction of Dr. Wendy Perla Kurtz. Our
             collective efforts involved leveraging data processing and
             visualization techniques to draw humanistic conclusions about the
             global gender-wealth gap. This final project challenged students to
