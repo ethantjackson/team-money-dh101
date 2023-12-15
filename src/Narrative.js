@@ -357,6 +357,47 @@ const Narrative = () => {
             are economic reasons for the gender-education gap as well as social
             (Montoya 2019).
           </Typography>
+          <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3}>
+            Conclusions
+          </Typography>
+          <Typography>
+            Drawing upon a wealth of data, our conclusion asserts that
+            individualism and higher education are pivotal in mitigating wealth
+            gaps. The individualistic ethos, prevalent in Western societies,
+            champions personal achievements and has been instrumental in
+            fostering environments where women's educational pursuits are
+            encouraged and normalized. This cultural paradigm has been conducive
+            to the narrowing of wealth disparities, as women empowered by
+            individualistic values are more likely to seek and obtain higher
+            education, increasing their potential for economic success.
+            <br />
+            <br />
+            Furthermore, the data underscores the transformative role of higher
+            education in wealth equalization. Expected years of schooling for
+            women are positively correlated with economic indicators such as the
+            Pay Indicator Score, which reflects the legal and regulatory
+            environment's support for women's economic participation. Regions
+            with higher educational expectancies for women, like North America
+            and Europe, exhibit higher Pay Indicator Scores, indicating a more
+            equitable economic landscape. This trend is a testament to the
+            assertion that as women's access to quality education increases, so
+            does their potential for wealth creation.
+            <br />
+            <br /> In addition to cultural and educational influences,
+            legislative reforms and economic policies play a significant role in
+            this dynamic. Laws that enhance women's rights and promote gender
+            equality in the workforce contribute to closing the wealth gap.
+            However, these measures must be continuously evaluated and
+            strengthened, as the presence of high GDP does not always correlate
+            with high Pay Indicator Scores, revealing the complexity of economic
+            equality.
+            <br />
+            <br /> In essence, promoting individualism and access to higher
+            education for women, coupled with robust legal frameworks that
+            support gender equality, is fundamental in reducing wealth gaps.
+            This multifaceted approach not only empowers women economically but
+            also fosters a more just and prosperous society for all.
+          </Typography>
         </Box>
       </Container>
     </>
