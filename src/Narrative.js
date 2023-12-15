@@ -360,7 +360,7 @@ const Narrative = () => {
           <Typography variant='h3' sx={{ fontWeight: 'bold' }} mt={3}>
             Conclusions
           </Typography>
-          <Typography>
+          <Typography mt={2}>
             Drawing upon a wealth of data, our conclusion asserts that
             individualism and higher education are pivotal in mitigating wealth
             gaps. The individualistic ethos, prevalent in Western societies,
